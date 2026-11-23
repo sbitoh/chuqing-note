@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- 封面主渐变：高级沉稳深青蓝质感 -->
+    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+
+    <!-- 书脊暗部渐变 -->
+    <linearGradient id="spineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#075985"/>
+      <stop offset="85%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <!-- 侧边纸张层渐变 -->
+    <linearGradient id="pagesGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+
+    <!-- 丝带书签渐变 (金琥珀暖色，醒目精致) -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- 皮筋束带渐变 -->
+    <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+
+    <!-- 柔和立体投影 -->
+    <filter id="notebookShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0f172a" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+
+    <filter id="ribbonShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#notebookShadow)">
+    <!-- 1. 底层厚重书页侧边 (外露纸张层) -->
+    <rect x="105" y="60" width="335" height="395" rx="20" fill="url(#pagesGrad)"/>
+    <!-- 纸张纹理切面线条 -->
+    <line x1="432" y1="80" x2="432" y2="445" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+    <line x1="120" y1="447" x2="430" y2="447" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+
+    <!-- 2. 笔记本主封面 -->
+    <rect x="75" y="50" width="350" height="405" rx="22" fill="url(#coverGrad)"/>
+
+    <!-- 3. 左侧书脊压痕区域 -->
+    <path d="M 75 72 A 22 22 0 0 1 97 50 L 125 50 L 125 455 L 97 455 A 22 22 0 0 1 75 433 Z" fill="url(#spineGrad)"/>
+    <!-- 书脊凹槽压线 -->
+    <line x1="125" y1="50" x2="125" y2="455" stroke="#082f49" stroke-width="3" opacity="0.6"/>
+    <line x1="127" y1="50" x2="127" y2="455" stroke="#38bdf8" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- 书脊缝线细节 (Stitching) -->
+    <line x1="100" y1="70" x2="100" y2="435" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 8" opacity="0.45"/>
+
+    <!-- 4. 封面极简排版横线 (体现记录/笔记属性) -->
+    <line x1="165" y1="180" x2="280" y2="180" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="165" y1="215" x2="330" y2="215" stroke="#7dd3fc" stroke-width="4.5" stroke-linecap="round" opacity="0.45"/>
+    <line x1="165" y1="250" x2="250" y2="250" stroke="#bae6fd" stroke-width="4.5" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- 5. 经典右侧皮筋束带 (Elastic Strap) -->
+    <rect x="365" y="47" width="26" height="411" rx="4" fill="url(#strapGrad)" opacity="0.85"/>
+    <!-- 皮筋两端金属固定扣 -->
+    <rect x="367" y="48" width="22" height="6" rx="2" fill="#94a3b8"/>
+    <rect x="367" y="451" width="22" height="6" rx="2" fill="#94a3b8"/>
+
+    <!-- 6. 丝带书签 (Bookmark Ribbon，探出封面下垂) -->
+    <g filter="url(#ribbonShadow)">
+      <path d="M 230 46 L 262 46 L 262 170 L 246 152 L 230 170 Z" fill="url(#ribbonGrad)"/>
+      <!-- 丝带高光线 -->
+      <line x1="235" y1="46" x2="235" y2="155" stroke="#fef08a" stroke-width="1.5" opacity="0.6"/>
+    </g>
+  </g>
+</svg>

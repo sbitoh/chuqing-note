@@ -1,0 +1,37 @@
+{
+  "name": "chuqing-note",
+  "version": "1.0.0",
+  "private": true,
+  "description": "初晴笔记 (ChuQing Note) - 专为 NAS 与私有云打造的现代化、离线优先富文本笔记系统",
+  "keywords": [
+    "notes",
+    "wysiwyg",
+    "rich-text",
+    "tiptap",
+    "self-hosted",
+    "nas",
+    "sqlite",
+    "offline-first",
+    "capacitor",
+    "android"
+  ],
+  "author": "ChuQing Note",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace=@chuqing/server run dev",
+    "dev:web": "npm --workspace=@chuqing/web run dev",
+    "dev": "npm run dev:server",
+    "build:shared": "npm --workspace=@chuqing/shared run build",
+    "build:server": "npm --workspace=@chuqing/server run build",
+    "build:web": "npm --workspace=@chuqing/web run build",
+    "build:apk": "npm run build:web && cd packages/android && npx cap sync android && cd android && export ANDROID_HOME=${ANDROID_HOME:-$HOME/dev_tools/android-sdk} && ./gradlew assembleDebug && cp app/build/outputs/apk/debug/app-debug.apk ../../web/public/chuqing-note.apk && echo '✅ Android APK compiled successfully!'",
+    "build": "npm run build:shared && npm run build:server && npm run build:web",
+    "start": "npm --workspace=@chuqing/server start"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.15"
+  }
+}

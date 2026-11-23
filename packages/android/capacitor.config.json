@@ -1,0 +1,18 @@
+{
+  "appId": "xyz.chuqing.note",
+  "appName": "初晴笔记",
+  "webDir": "../web/dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "CapacitorCookies": {
+      "enabled": true
+    }
+  }
+}

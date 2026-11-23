@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  chuqing-note:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chuqing-note:latest
+    container_name: chuqing-note
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - /docker/chuqing-note/data:/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATA_DIR=/data

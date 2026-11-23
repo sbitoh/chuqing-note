@@ -1,0 +1,12 @@
+node_modules
+packages/*/node_modules
+dist
+packages/*/dist
+data
+storage
+uploads
+*.db
+*.db-shm
+*.db-wal
+.git
+.github
