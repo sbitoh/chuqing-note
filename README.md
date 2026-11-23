@@ -1,7 +1,23 @@
 # 🌤️ 初晴笔记 (ChuQing Note)
 
 > **雨过初晴，万卷归简。**  
-> 一款专为 NAS 与私有云打造的现代化、离线优先富文本笔记系统。彻底告别繁琐的 Markdown 语法，所见即所得，支持任意格式附件拖入与流式预览。
+> 一款专为 NAS 与私有云打造的现代化、离线优先富文本知识库系统。彻底告别繁琐的 Markdown 语法记忆，所见即所得，支持任意格式附件拖入与流式预览。
+
+[![GitHub Release](https://img.shields.io/github/v/release/sbitoh/chuqing-note?color=0284c7&label=Release)](https://github.com/sbitoh/chuqing-note/releases/latest)
+[![Android APK](https://img.shields.io/badge/Android-APK%20Download-34d399?logo=android&logoColor=white)](https://github.com/sbitoh/chuqing-note/releases/latest/download/chuqing-note-v1.0.0.apk)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+---
+
+### 📱 客户端直接下载 (Download APK)
+
+无需从源码编译，直接点击下方链接下载安装包即可在安卓手机或平板上使用：
+
+| 客户端平台 | 版本 | 安装包直接下载 | 说明 |
+| :--- | :--- | :--- | :--- |
+| **Android 原生客户端** | `v1.0.0` | [👉 **立即下载 chuqing-note-v1.0.0.apk (23.8 MB)**](https://github.com/sbitoh/chuqing-note/releases/latest/download/chuqing-note-v1.0.0.apk) | 支持 Android 8.0+ 手机 / 平板，附带开箱即用连接向导 |
+
+> 💡 **使用说明**：安卓手机安装 APK 后首次启动，跟随引导填写您的 NAS / 私有服务器接入地址（外网域名或内网 IP 均可），点击连接即可开始同步书写。
 
 ---
 
@@ -60,7 +76,7 @@
 
 1. **克隆仓库**：
    ```bash
-   git clone https://github.com/your-username/chuqing-note.git
+   git clone https://github.com/sbitoh/chuqing-note.git
    cd chuqing-note
    ```
 
@@ -92,8 +108,11 @@ npm run dev:web
 
 ---
 
-## 📱 安卓客户端 (Android APK) 构建
+## 📱 安卓客户端 (Android APK)
 
+> 💡 **普通用户推荐直接下载**：如无需二次开发，请直接点击下载官方预编译好的 [📥 chuqing-note-v1.0.0.apk (23.8 MB)](https://github.com/sbitoh/chuqing-note/releases/latest/download/chuqing-note-v1.0.0.apk) 即可安装使用。
+
+### 开发者二次开发与本地编译
 本项目通过 Capacitor 将 Web 前端封装为原生 Android 应用：
 
 1. **打包前端静态产物**：
